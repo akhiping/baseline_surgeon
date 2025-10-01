@@ -1,5 +1,6 @@
 /* Sample CSS with non-Baseline features */
 
+/* 1. text-wrap: balance */
 .title {
   text-wrap: balance;
   font-size: 2rem;
@@ -9,6 +10,31 @@
 .container {
   display: grid;
   gap: 1rem;
+}
+
+/* 2. :has() selector */
+.card:has(img) {
+  padding: 0;
+}
+
+/* 3. CSS Nesting */
+.button {
+  background: blue;
+  color: white;
+  
+  &:hover {
+    background: darkblue;
+  }
+  
+  &:focus {
+    outline: 2px solid blue;
+  }
+}
+
+/* 4. :focus-visible */
+input:focus-visible {
+  outline: 2px solid orange;
+  outline-offset: 2px;
 }
 
 /* This will be wrapped in @supports by the transform */

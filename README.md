@@ -32,15 +32,22 @@ npx @baseline-surgeon/cli fix "src/**/*.{js,ts,tsx,css}" --target baseline-now
 
 ## Supported Transforms
 
-### JavaScript / DOM
+### JavaScript / DOM (7 transforms)
 
-- **`structuredClone`** → Polyfill for deep cloning objects
-- **`URL.canParse`** → Safe URL validation fallback  
-- **`Array.prototype.at`** → Negative indexing support
+1. **`structuredClone`** → Polyfill for deep cloning objects (handles objects, arrays, Date, Map, Set)
+2. **`URL.canParse`** → Safe URL validation fallback using try/catch
+3. **`Array.prototype.at`** → Negative indexing support for arrays
+4. **`Element.toggleAttribute`** → Toggle boolean attributes on DOM elements
+5. **`navigator.clipboard.writeText`** → Clipboard API with execCommand fallback
+6. **`AbortSignal.timeout`** → Auto-aborting signals using AbortController
+7. **`Intl.Segmenter`** → Best-effort word/sentence segmentation (⚠️ simplified implementation)
 
-### CSS
+### CSS (4 transforms)
 
-- **`text-wrap: balance`** → Wrapped in `@supports` for progressive enhancement
+8. **`text-wrap: balance`** → Wrapped in `@supports` for progressive enhancement
+9. **`:has()` selector** → Wrapped in `@supports selector()` guard
+10. **CSS Nesting** → Flattens nested selectors for broader compatibility
+11. **`:focus-visible`** → Adds `:focus` fallback for older browsers
 
 ## Configuration
 
