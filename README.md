@@ -1,4 +1,4 @@
-# Baseline Surgeon
+# Baseline Surgeon 🔧
 
 **Auto-refactor web code to Baseline-safe patterns using official web-features data**
 
@@ -63,9 +63,23 @@ export default {
 } as const;
 ```
 
-## Playground
+## 🌐 Live Playground
 
-Try Baseline Surgeon in your browser at the interactive playground (coming soon).
+**Try it now: [https://baseline-surgeon-6lr2egvej-tars-projects-b718b6e1.vercel.app](https://baseline-surgeon-6lr2egvej-tars-projects-b718b6e1.vercel.app)**
+
+Features:
+- **Monaco Editor**: VS Code-quality editing experience
+- **10 Interactive Examples**: See transforms in action
+- **Before/After View**: Side-by-side comparison
+- **Instant Feedback**: Run transforms in your browser
+- **Explanations**: Learn why each transform is needed
+
+Run locally:
+```bash
+cd apps/playground
+npm install
+npm run dev
+```
 
 ## GitHub Action
 
