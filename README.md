@@ -110,4 +110,5 @@ MIT - see [LICENSE](./LICENSE) file.
 
 ---
 
-Made with ❤️ for the web platform 
+Made for the Baseline Tooling Hackathon
+A.P
