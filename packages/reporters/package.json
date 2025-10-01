@@ -1,0 +1,32 @@
+{
+  "name": "@baseline-surgeon/reporters",
+  "version": "0.1.0",
+  "description": "Report generators for Baseline Surgeon",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/**/*.ts",
+    "test": "vitest",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@baseline-surgeon/core": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.0",
+    "vitest": "^0.34.0"
+  }
+} 

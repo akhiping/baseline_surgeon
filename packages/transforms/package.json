@@ -1,0 +1,42 @@
+{
+  "name": "@baseline-surgeon/transforms",
+  "version": "0.1.0",
+  "description": "Transform implementations for Baseline Surgeon",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/**/*",
+    "polyfills/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/**/*.ts",
+    "test": "vitest",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@baseline-surgeon/core": "workspace:*",
+    "@babel/parser": "^7.23.0",
+    "@babel/traverse": "^7.23.0",
+    "@babel/types": "^7.23.0",
+    "@babel/generator": "^7.23.0",
+    "postcss": "^8.4.0",
+    "postcss-selector-parser": "^6.0.0",
+    "postcss-nested": "^6.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.0",
+    "vitest": "^0.34.0",
+    "@types/babel__traverse": "^7.20.0",
+    "@types/babel__generator": "^7.6.0"
+  }
+} 

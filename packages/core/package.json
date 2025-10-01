@@ -1,0 +1,40 @@
+{
+  "name": "@baseline-surgeon/core",
+  "version": "0.1.0",
+  "description": "Core functionality for Baseline Surgeon - feature detection and analysis",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/**/*",
+    "data/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/**/*.ts",
+    "test": "vitest",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.23.0",
+    "@babel/traverse": "^7.23.0",
+    "@babel/types": "^7.23.0",
+    "postcss": "^8.4.0",
+    "postcss-selector-parser": "^6.0.0",
+    "glob": "^10.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.0",
+    "vitest": "^0.34.0",
+    "@types/babel__parser": "^7.1.0",
+    "@types/babel__traverse": "^7.20.0"
+  }
+} 

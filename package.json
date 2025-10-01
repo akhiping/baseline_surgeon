@@ -1,0 +1,32 @@
+{
+  "name": "baseline-surgeon",
+  "version": "0.1.0",
+  "description": "Auto-refactor web code to Baseline-safe patterns using official web-features data",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "clean": "turbo run clean"
+  },
+  "keywords": ["baseline", "web-features", "refactor", "codemod", "typescript"],
+  "author": "Baseline Surgeon Contributors",
+  "license": "MIT",
+  "devDependencies": {
+    "turbo": "^1.10.0",
+    "typescript": "^5.2.0",
+    "@types/node": "^20.0.0",
+    "vitest": "^0.34.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+} 

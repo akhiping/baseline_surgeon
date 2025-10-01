@@ -1,0 +1,18 @@
+/* Sample CSS with non-Baseline features */
+
+.title {
+  text-wrap: balance;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.container {
+  display: grid;
+  gap: 1rem;
+}
+
+/* This will be wrapped in @supports by the transform */
+.fancy-text {
+  text-wrap: balance;
+  color: #333;
+} 
