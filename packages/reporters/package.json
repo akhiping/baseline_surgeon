@@ -23,7 +23,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@baseline-surgeon/core": "workspace:*"
+    "@baseline-surgeon/core": "file:../core"
   },
   "devDependencies": {
     "typescript": "^5.2.0",

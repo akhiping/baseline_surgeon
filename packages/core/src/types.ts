@@ -19,6 +19,9 @@ export interface Finding {
   featureId: string;
   transformId: string;
   message?: string;
+  severity?: 'error' | 'warning' | 'info';
+  fixable?: boolean;
+  baselineStatus?: 'widely_available' | 'newly_available' | 'limited_availability' | 'unknown';
 }
 
 export interface FileContext {
@@ -57,6 +60,8 @@ export interface BaselineAdapter {
 }
 
 export interface AnalysisResult {
+  filePath?: string;
+  language?: 'javascript' | 'typescript' | 'css';
   findings: Finding[];
   summary: {
     totalFiles: number;

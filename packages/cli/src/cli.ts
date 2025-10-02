@@ -43,10 +43,13 @@ program
 // Report command
 program
   .command('report')
-  .description('Generate reports from analysis results')
-  .option('--in <file>', 'Input findings JSON file', 'reports/baseline-findings.json')
-  .option('--reporter <type>', 'Output format', 'markdown')
-  .option('--out <dir>', 'Output directory', 'reports')
+  .description('Generate comprehensive Baseline reports')
+  .argument('[patterns...]', 'File patterns to analyze', ['src/**/*.{js,ts,tsx,css}'])
+  .option('--target <target>', 'Baseline target', 'baseline-now')
+  .option('--format <format>', 'Output format: markdown, sarif, json', 'markdown')
+  .option('--output <file>', 'Output file path (defaults to stdout)')
+  .option('--include <patterns>', 'Include patterns (comma-separated)')
+  .option('--exclude <patterns>', 'Exclude patterns (comma-separated)')
   .action(reportCommand);
 
 // List transforms command

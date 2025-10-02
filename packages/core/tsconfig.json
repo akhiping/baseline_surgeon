@@ -5,7 +5,9 @@
     "rootDir": "./src",
     "composite": true,
     "noEmit": false,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "types": []
   },
   "include": ["src/**/*"],
   "exclude": ["dist", "**/*.test.ts"]

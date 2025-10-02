@@ -146,9 +146,8 @@ export class Analyzer {
         'optionalChaining',
         'throwExpressions',
         'topLevelAwait',
-        'trailingFunctionCommas',
-        ...(isTypeScript ? ['typescript'] : [])
-      ]
+        ...(isTypeScript ? ['typescript' as const] : [])
+      ] as any
     });
   }
 

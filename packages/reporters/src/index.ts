@@ -1,14 +1,11 @@
-export interface Reporter {
-  generate(data: any): string;
-}
+// Export Markdown Reporter
+export { MarkdownReporter, type MarkdownReporterOptions } from './markdown-reporter.js';
 
-export class MarkdownReporter implements Reporter {
-  generate(data: any): string {
-    return '# Baseline Surgeon Report\n\nReport generation not yet implemented.';
-  }
-}
+// Export SARIF Reporter
+export { SarifReporter, type SarifLog, type SarifRun, type SarifRule, type SarifResult } from './sarif-reporter.js';
 
-export class JsonReporter implements Reporter {
+// Export JSON Reporter (simple utility)
+export class JsonReporter {
   generate(data: any): string {
     return JSON.stringify(data, null, 2);
   }

@@ -57,7 +57,7 @@ export const cssNestingTransform: Transform = {
       let content = ctx.content;
       
       // Simple case: flatten &:hover, &:focus, etc.
-      content = this.flattenSimpleNesting(content);
+      content = flattenSimpleNesting(content);
       
       changes.push({
         type: 'modify',
@@ -80,11 +80,16 @@ export const cssNestingTransform: Transform = {
     }
   },
 
-  /**
-   * Simple flattening for basic nesting patterns
-   * Full implementation would use postcss-nested
-   */
-  flattenSimpleNesting(css: string): string {
+  explain(finding: Finding): string {
+    return `CSS nesting (&) is not widely supported. This transform flattens nested selectors to standard CSS rules. For full nesting support, consider using a PostCSS plugin during your build process.`;
+  }
+};
+
+/**
+ * Simple flattening for basic nesting patterns
+ * Full implementation would use postcss-nested
+ */
+function flattenSimpleNesting(css: string): string {
     // This is a simplified implementation
     // For production, use postcss-nested plugin
     
@@ -123,9 +128,4 @@ export const cssNestingTransform: Transform = {
     }
     
     return result.join('\n');
-  },
-
-  explain(finding: Finding): string {
-    return `CSS Nesting allows writing nested selectors, but it's not supported in older browsers. This transform flattens nested CSS into standard flat rules. Note: Complex nesting patterns may require manual review. See: https://developer.mozilla.org/docs/Web/CSS/CSS_nesting`;
-  }
-}; 
+} 

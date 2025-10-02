@@ -1,3 +1,4 @@
+export { calculateBaselineScore, analyzeFeatureUsage, calculateFixImpact } from './metrics.js';
 // Main classes
 export { DefaultBaselineAdapter } from './baseline-adapter.js';
 export { Analyzer, FindingBuilder } from './analyzer.js';

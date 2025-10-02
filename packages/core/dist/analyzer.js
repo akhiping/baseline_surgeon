@@ -130,7 +130,6 @@ export class Analyzer {
                 'optionalChaining',
                 'throwExpressions',
                 'topLevelAwait',
-                'trailingFunctionCommas',
                 ...(isTypeScript ? ['typescript'] : [])
             ]
         });

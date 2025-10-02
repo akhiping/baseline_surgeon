@@ -11,7 +11,8 @@ Modern web APIs are great, but browser support varies. Baseline Surgeon helps yo
 - **Analyzing** your code for non-Baseline features
 - **Transforming** them with safe, conservative polyfills and fallbacks  
 - **Preserving** the original behavior through progressive enhancement
-- **Reporting** what changed and why
+- **Scoring** your codebase's Baseline compatibility (0-100 metric)
+- **Reporting** what changed and why with beautiful, actionable insights
 
 ## How It Works
 
@@ -97,11 +98,45 @@ Add to your workflow:
 
 This is a monorepo with:
 
-- **`@baseline-surgeon/core`** - Analysis engine and Baseline adapter
+- **`@baseline-surgeon/core`** - Analysis engine, Baseline adapter, and metrics
 - **`@baseline-surgeon/transforms`** - Transform implementations and polyfills
 - **`@baseline-surgeon/cli`** - Command-line interface  
-- **`@baseline-surgeon/reporters`** - Markdown, JSON, and SARIF output
+- **`@baseline-surgeon/reporters`** - Enhanced Markdown, SARIF, and JSON reporters
 - **`@baseline-surgeon/action`** - GitHub Action wrapper
+
+## Reporting & Metrics 📊
+
+Baseline Surgeon includes a powerful reporting system:
+
+### Baseline Adoption Score
+
+Get a **0-100 metric** quantifying your codebase's Baseline compatibility:
+
+```bash
+baseline-surgeon report --output report.md
+```
+
+**Output includes:**
+- 📊 Overall score with grade (A-F)
+- 📈 Language breakdown (JavaScript/TypeScript vs CSS)
+- 🎯 Fix Impact Analysis showing projected improvements
+- 🔍 Feature Usage Statistics
+- 💡 Actionable recommendations
+
+### Multiple Report Formats
+
+```bash
+# Markdown report (human-readable)
+baseline-surgeon report --format markdown --output report.md
+
+# SARIF for CI/CD (GitHub Code Scanning, Azure DevOps, GitLab)
+baseline-surgeon report --format sarif --output baseline.sarif
+
+# JSON for custom integrations
+baseline-surgeon report --format json --output data.json
+```
+
+**[📖 Full Reporting Guide](./docs/REPORTING.md)**
 
 ## Philosophy & Limitations
 

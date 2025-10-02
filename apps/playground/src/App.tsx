@@ -178,11 +178,11 @@ export default function App() {
 
       <footer className="footer">
         <p>
-          Built for the <a href="https://baseline.hackathon.com" target="_blank" rel="noopener noreferrer">Baseline Tooling Hackathon</a>
+          Built for the <a href="https://baseline.devpost.com/" target="_blank" rel="noopener noreferrer">Baseline Tooling Hackathon</a>
           {' • '}
-          <a href="https://github.com/baseline-surgeon/baseline-surgeon" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <a href="https://github.com/akhiping/baseline_surgeon" target="_blank" rel="noopener noreferrer">View on GitHub</a>
           {' • '}
-          <a href="/docs/TRANSFORMS.md" target="_blank" rel="noopener noreferrer">Documentation</a>
+          
         </p>
       </footer>
     </div>
