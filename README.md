@@ -1,8 +1,16 @@
-# Baseline Surgeon 🔧
+<p align="center">
+  <img src="./assets/logo.svg" alt="Baseline Surgeon" width="200"/>
+</p>
 
-**Auto-refactor web code to Baseline-safe patterns using official web-features data**
+<h1 align="center">Baseline Surgeon</h1>
 
-🎮 **[Baseline Surgeon Playground](https://baseline-surgeon-6lr2egvej-tars-projects-b718b6e1.vercel.app)** - Try it live in your browser!
+<p align="center">
+  <strong>Auto-refactor web code to Baseline-safe patterns using official web-features data</strong>
+</p>
+
+<p align="center">
+  🎮 <strong><a href="https://baseline-surgeon-6lr2egvej-tars-projects-b718b6e1.vercel.app">Baseline Surgeon Playground</a></strong> - Try it live in your browser!
+</p>
 
 Baseline Surgeon is an open-source TypeScript toolkit that analyzes your web code and automatically transforms modern features to be compatible with your target Baseline. It uses the official [web-features](https://github.com/web-platform-dx/web-features) dataset to make informed decisions about when to apply polyfills and fallbacks.
 
