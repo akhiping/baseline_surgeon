@@ -45,4 +45,16 @@ coverage/
 *.temp
 
 # Vercel
-.vercel 
+.vercel
+
+# Personal documentation and demo materials (not for public repo)
+START-HERE.md
+README-FOR-YOU.md
+WHAT-YOU-BUILT.md
+ARCHITECTURE-EXPLAINED.md
+DEMO-GUIDE.md
+DEMO-CHEAT-SHEET.md
+PRESENTATION-SCRIPT.md
+DOCUMENTATION-INDEX.md
+HACKATHON-SUBMISSION.md
+GITHUB-PORTFOLIO-UPDATE.md 
